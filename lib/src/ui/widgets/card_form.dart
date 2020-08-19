@@ -72,6 +72,7 @@ class _CardFormState extends State<CardForm> {
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: CreditCard(
+                  width: widget.width,
                   cardNumber: _validationModel.number ?? "",
                   cardExpiry: cardExpiry,
                   cvv: _validationModel.cvc ?? "",
