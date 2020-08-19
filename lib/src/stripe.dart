@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:uni_links/uni_links.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -146,6 +147,9 @@ class Stripe {
         await sub.cancel();
         final intent = await callback(uri);
         completer.complete(intent);
+        if (kIsWeb) {
+          await closeWebView();
+        }
       }
     });
 
