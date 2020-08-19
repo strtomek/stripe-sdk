@@ -14,10 +14,14 @@ dependencies:
   url_launcher: ^5.4.2
   uni_links: ^0.4.0
   mask_text_input_formatter: ^1.0.6
-  awesome_card: ^1.1.0
   flutter_slidable: ^0.5.4
   simple_animations: ^2.1.0
   supercharged: ^1.5.1
+
+  awesome_card:
+    git:
+      url: git@bitbucket.org:leancode-team/awesome-card.git
+      ref: master 
 
 dev_dependencies:
   flutter_test:
